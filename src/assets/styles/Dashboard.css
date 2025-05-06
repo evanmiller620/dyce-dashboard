@@ -1,0 +1,398 @@
+.db-wrapper {
+    background-color: #ddd;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.dashboard-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+nav * {
+    margin: 0 15px;
+}
+
+nav a {
+    color: black;
+}
+
+#profile {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+@keyframes slideFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+#menu {
+    background-color: #eee;
+    color: white;
+    border-radius: 5px;
+    position: fixed;
+    top: 45px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideFadeIn 0.1s ease-out;
+}
+
+#menu label {
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+
+#menu button {
+    padding: 5px;
+    background: none;
+}
+
+#menu button:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #51bfff;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    margin: 5px;
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 10px;
+    margin: 0 auto;
+}
+
+.managers-wrapper {
+    display: flex;
+    justify-content: start;
+    margin: 0;
+    background-color: white;
+    border-radius: 20px 0 0 0;
+    height: calc(100vh - 50px);
+}
+
+.manager {
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    /* height: fit-content; */
+    height: 100%;
+    flex: 1;
+    border-right: 1px solid #ccc;
+}
+
+.usage-wrapper img {
+    margin: 30px;
+}
+
+.tester-wrapper input, button {
+    font-size: 16px;
+}
+
+.keys-wrapper * {
+    margin: 5px;
+}
+
+.wallets-wrapper * {
+    margin: 5px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.header-container h1 {
+    margin: 5px;
+}
+
+.header-container select {
+    margin-left: auto;
+}
+
+.body-container {
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+.table-container {
+    overflow-y: auto;
+    margin: 0;
+}
+
+.table-container::-webkit-scrollbar {
+    display: none;
+}
+
+.table-container * {
+    margin: 0;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-spacing: 0px;
+}
+
+td, th {
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 8px;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+td {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+tbody tr.selected {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+select {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px;
+    /* width: 100%; */
+    text-overflow: ellipsis;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+option {
+    background-color: white;
+}
+
+.trash, .refresh {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.wallets-wrapper .refresh {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    z-index: 1;
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.tester-wrapper input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.popup input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px #ccc solid;
+}
+
+.popup input.copy {
+    padding-right: 50px;
+}
+
+.popup * {
+    font-size: 16px;
+}
+
+.popup button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.popup button.copy {
+    width: 40px;
+    height: 40px;
+    margin-left: -50px;
+    background-color: transparent;
+    align-self: center;
+}
+
+.popup button.copy:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.popup button.copy:active {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.popup .error-message {
+    color: red;
+    font-size: 14px;
+    align-self: flex-start;
+    margin: 5px;
+}
+
+.key-usage-wrapper {
+    width: 45vw;
+    flex: none;
+}
+
+.usage-wrapper .pie-title {
+    margin: 0;
+}
+
+.usage-wrapper .refresh img {
+    width: 40px;
+    height: 40px;
+}
+
+.key-usage-wrapper .refresh img {
+    width: 40px;
+    height: 40px;
+}
+
+.usage-wrapper label {
+    margin-left: auto;
+    margin-right: -5px;
+}
+
+.usage-wrapper .col {
+    display: flex;
+    height: 30vh;
+    margin-bottom: 25px;
+}
+
+.usage-wrapper .row {
+    flex: 1;
+    height: 100%;
+    margin-left: 20px;
+}
+
+.usage-wrapper h3 {
+    margin: 10px;
+}
+
+button.refresh {
+    padding: 20px;
+}
+
+button.refresh:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+button.refresh:active {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.balance-wrapper {
+    padding: 20px;
+    padding-left: 0;
+    height: 27vh;
+}
+
+.graph-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.graph-header label {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.endpoint-block {
+    background-color: rgb(249, 249, 249);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+  
+.endpoint-block code {
+    background-color: #eee;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: monospace;
+}
+  
+.endpoint-block ul {
+    margin-left: 20px;
+    padding-left: 0;
+}
+  
+.title {
+    text-align: left;
+}
