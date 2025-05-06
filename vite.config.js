@@ -10,7 +10,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src')
     }
   },
-  rollupOptions: {
-    external: ['ethers']
+  build: {
+    rollupOptions: {
+      external: ['ethers']
+    }
   }
 })
